@@ -2,15 +2,24 @@
 
 ## Tentang Aplikasi
 
-Cuaca Kalimantan Tengah adalah aplikasi mobile yang dibuat menggunakan Flutter untuk menampilkan informasi cuaca terkini di beberapa kota dan kabupaten di Kalimantan Tengah. Pengguna dapat memilih lokasi, lalu aplikasi mengambil dan menampilkan suhu serta kecepatan angin dari Open-Meteo Forecast API.
+Cuaca Kalimantan Tengah adalah aplikasi yang dibuat menggunakan Flutter untuk menampilkan suhu dan kecepatan angin terkini di beberapa kota dan kabupaten di Kalimantan Tengah. Data cuaca diambil dari Open-Meteo Forecast API melalui koneksi internet.
 
 ## Fitur
 
-- Memilih kota atau kabupaten di Kalimantan Tengah.
-- Menampilkan suhu dalam derajat Celsius.
-- Menampilkan kecepatan angin dalam km/h.
-- Menampilkan indikator saat data cuaca sedang dimuat.
-- Menampilkan pesan jika terjadi masalah koneksi atau pengambilan data.
+- Memilih lokasi dari daftar tujuh kota/kabupaten: Palangkaraya, Sampit, Pangkalan Bun, Muara Teweh, Kuala Kapuas, Kuala Kurun, dan Kasongan.
+- Memuat cuaca Palangkaraya secara otomatis saat aplikasi dibuka.
+- Memperbarui data cuaca saat pengguna memilih lokasi lain.
+- Menampilkan suhu dalam derajat Celsius (°C) dan kecepatan angin dalam kilometer per jam (km/h).
+- Menampilkan indikator ketika data sedang dimuat dan pesan jika terjadi masalah koneksi atau pengambilan data.
+
+## Cara Menggunakan
+
+1. Buka aplikasi; cuaca Palangkaraya akan dimuat secara otomatis.
+2. Tekan pilihan **Pilih Kabupaten / Kota**.
+3. Pilih kota atau kabupaten yang ingin dilihat.
+4. Tunggu hingga suhu dan kecepatan angin lokasi tersebut muncul.
+
+Pastikan perangkat terhubung ke internet agar aplikasi dapat mengambil data terbaru.
 
 ## Arsitektur Aplikasi
 
@@ -41,25 +50,26 @@ kalteng_weather/
 - Paket `http`
 - Open-Meteo Forecast API
 
-## Cara Menjalankan
+## Persiapan dan Cara Menjalankan
 
-1. Buka folder proyek di Visual Studio Code.
-2. Sambungkan HP Android dengan USB debugging aktif, atau nyalakan emulator Android.
-3. Buka terminal melalui menu **Terminal → New Terminal**.
-4. Pastikan terminal berada di folder utama proyek, yaitu folder yang berisi `pubspec.yaml`.
-5. Ambil dependensi proyek dengan menjalankan:
+Pastikan Flutter SDK sudah terpasang. Jika mengambil project dari GitHub, clone repository terlebih dahulu dan buka folder project di Visual Studio Code. Kemudian:
+
+1. Sambungkan HP Android dengan USB debugging aktif, atau nyalakan emulator Android.
+2. Buka terminal melalui menu **Terminal → New Terminal**.
+3. Pastikan terminal berada di folder utama proyek, yaitu folder yang berisi `pubspec.yaml`.
+4. Ambil dependensi proyek dengan menjalankan:
 
    ```bash
    flutter pub get
    ```
 
-6. Jalankan aplikasi dengan perintah:
+5. Jalankan aplikasi dengan perintah:
 
    ```bash
    flutter run
    ```
 
-7. Setelah aplikasi terbuka di HP atau emulator, pilih kota atau kabupaten untuk melihat informasi cuacanya.
+6. Setelah aplikasi terbuka di HP atau emulator, pilih kota atau kabupaten untuk melihat informasi cuacanya.
 
 ## Pembuat
 
